@@ -6,7 +6,7 @@ const props = defineProps(['item']);
 
 <template>
 
-<div class="carousel-item-section container-lg">
+<div class="carousel-item-section container">
         <div class="carousel-column">
             <h1>{{ item.firstTitle }}</h1>
             <h1 class="mb-4">{{ item.secondTitle.split(' ')[0] }} <span class="bold-accent">{{ item.secondTitle.split(' ')[1] }}</span></h1>
@@ -25,7 +25,7 @@ const props = defineProps(['item']);
 :root{
     --dark: rgb(43, 43, 43);
     --blue: #3f68da;
-    --light-gray: #e4e1f1;
+    --light-gray: #eeeeee;
 }
 
 .carousel-item-section{

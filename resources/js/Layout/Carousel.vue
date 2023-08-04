@@ -50,7 +50,7 @@ const swipeRight = () => {
 
 <template>
 
-<div class="carousel">
+<div class="carousel d-none d-lg-block">
 
     <div class="switches">
         <button @click="swipeLeft" class="carousel-switch-btn"><i class="fa-solid fa-chevron-left"></i></button>

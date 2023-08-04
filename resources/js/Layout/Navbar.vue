@@ -82,7 +82,7 @@ nav{
 :root{
     --dark: rgb(43, 43, 43);
     --blue: #3f68da;
-    --light-gray: #eceaf8;
+    --light-gray: #eeeeee;
 }
 
 .top-menu{
