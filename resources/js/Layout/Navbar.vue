@@ -14,7 +14,7 @@ const toggleNavbarSmall = () => {
 
 <nav>
 
-    <div class="top-menu container-lg">
+    <div class="top-menu container">
         <a href="/" class="logo">
             CYBERSTORE<span class="blue-accent">.</span>
         </a>
@@ -33,7 +33,7 @@ const toggleNavbarSmall = () => {
         <div class="button-group d-sm-none d-none d-lg-flex">
             <a href=""><i class="fa-regular fa-user"></i></a>
             <a href=""><i class="fa-regular fa-heart"></i></a>
-            <button><i class="fa-solid fa-cart-shopping"></i></button>
+            <button @click="$emit('toggleCart')"><i class="fa-solid fa-cart-shopping"></i></button>
         </div>
         <button @click="toggleNavbarSmall" class="toggle-btn d-block d-lg-none"><i class="fa-solid fa-bars"></i></button>
     </div>
@@ -64,7 +64,7 @@ const toggleNavbarSmall = () => {
         <div class="nav-small-button-group" >
             <div><a href="#"><i class="fa-regular fa-user"></i></a></div>
             <div><a href=""><i class="fa-solid fa-magnifying-glass fa-rotate-90"></i></a></div>
-            <button href=""><i class="fa-solid fa-cart-shopping"></i></button>
+            <button @click="$emit('toggleCart')"><i class="fa-solid fa-cart-shopping"></i></button>
             <div><a href=""><i class="fa-regular fa-heart"></i></a></div>
         </div>
     </div>
@@ -190,7 +190,7 @@ select{
 }
 
 .nav-small {
-    position: absolute;
+    position: fixed;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
