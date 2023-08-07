@@ -19,3 +19,7 @@ use Inertia\Inertia;
 Route::get('/', function () {
     return Inertia::render('Home');
 });
+
+Route::get('/shop', function () {
+    return Inertia::render('Shop');
+});

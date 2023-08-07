@@ -65,7 +65,7 @@
                 </div>
             </div>
             <div class="col-lg-3 col-12">
-                <p class="footer-link-group-title">Customer Service</p>
+                <p class="footer-link-group-title">Quick Links</p>
                 <div class="footer-link-group">
                     <a href="" class="footer-link">Smartphones</a>
                     <a href="" class="footer-link">Headphones</a>

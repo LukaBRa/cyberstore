@@ -1,6 +1,6 @@
 <script setup>
 
-import { ref } from 'vue';
+import { ref, onMounted } from 'vue';
 
 const showNavbarSmall = ref(false);
 
@@ -42,7 +42,17 @@ const toggleNavbarSmall = () => {
         <div class="bottom-menu-content container">
             <div class="bottom-menu-links">
                 <a href="" class="bottom-menu-link">Home</a>
-                <a href="" class="bottom-menu-link">Shop</a>
+                <a href="" class="bottom-menu-link dropdown-hover" ref="dropdownHover">
+                    Shop <i class="fa-solid fa-caret-down" style="margin-left: 0.5rem;"></i>
+                    <div class="dropdown-menu-hover" ref="dropdownHoverMenu">
+                        <a href="" class="dropdown-menu-hover-link">PCs</a>
+                        <a href="" class="dropdown-menu-hover-link">Laptops</a>
+                        <a href="" class="dropdown-menu-hover-link">Graphic Cards</a>
+                        <a href="" class="dropdown-menu-hover-link">RAM</a>
+                        <a href="" class="dropdown-menu-hover-link">Processors</a>
+                        <a href="" class="dropdown-menu-hover-link">Monitors</a>
+                    </div>
+                </a>
                 <a href="" class="bottom-menu-link">About Us</a>
             </div>
             <div class="bottom-menu-phone">
@@ -143,6 +153,11 @@ select{
     background: none;
     border: none;
     font-size: 1.3rem;
+    transition: all 0.3s ease;
+}
+
+.button-group > *:hover{
+    color: var(--blue);
 }
 
 .bottom-menu{
@@ -153,7 +168,7 @@ select{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1rem 0rem;
+    /* padding: 1rem 0rem; */
     font-size: 1rem;
     font-weight: bold;
 }
@@ -162,6 +177,7 @@ select{
     color: white;
     text-decoration: none;
     transition: all 0.3s ease;
+    padding: 1rem 0rem;
 }
 
 .bottom-menu-link:hover{
@@ -276,6 +292,35 @@ select{
 .nav-small-button-group button:hover{
     cursor: pointer;
     background-color: var(--light-gray);
+}
+
+.dropdown-hover{
+    position: relative;
+}
+
+.dropdown-menu-hover{
+    position: absolute;
+    background-color: var(--light-gray);
+    transform: translateY(16px) translateX(-5px);
+    z-index: 1;
+    display: none;
+    width: max-content;
+    flex-direction: column;
+}
+
+.dropdown-hover:hover .dropdown-menu-hover{
+    display: flex;
+}
+
+.dropdown-menu-hover-link{
+    text-decoration: none;
+    color: var(--dark);
+    padding: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.dropdown-menu-hover-link:hover{
+    background-color: lightgray;
 }
 
 </style>
